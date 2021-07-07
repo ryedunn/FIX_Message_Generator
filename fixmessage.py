@@ -24,7 +24,7 @@ def FIXValues(start, finish):
     x = str(random.randint(start, finish))
     return x
 
-# Verify input arguments are valid.
+# Verify input arguments are valid
 try:
     #nummsg = int(sys.argv[1])
     nummsg = 30
