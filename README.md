@@ -7,8 +7,8 @@ Enter number of messages needed when executing the script (ie. python fixmessage
 
 ## Known problems: 
 ### FIX tag 10 (CheckSum) is not accurate
-  - The checksum of a FIX message is always the last field in the message. It is composed of three characters and has tag 10.[5] It is given by summing the ASCII value of all 
-characters in the message, except for those of the checksum field itself, and performing modulo 256 over the resulting summation.[6] For example, in the message below, the 
+  - The checksum of a FIX message is always the last field in the message. It is composed of three characters and has tag 10. It is given by summing the ASCII value of all 
+characters in the message, except for those of the checksum field itself, and performing modulo 256 over the resulting summation. For example, in the message below, the 
 summation of all ASCII values (including the SOH character, which has a value of 1 in the ASCII table) results in 4158. Performing the modulo operation gives the value 62. 
 Since the checksum is composed of three characters, 062 is used.  
 <pre>

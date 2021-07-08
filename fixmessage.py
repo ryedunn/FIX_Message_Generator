@@ -15,10 +15,11 @@
 # ----------------------------------------------------------------------
 
 # import modules required:
-import sys
-import random
-from time import strftime
 import datetime
+import random
+import sys
+import traceback
+from time import strftime
 
 # Repetitive funcion to grab a random between to integers
 def FIXValues(start, finish):
@@ -29,14 +30,15 @@ def FIXValues(start, finish):
 try:
     #nummsg = int(sys.argv[1])
     nummsg = 30
-except:
+except Exception:
     if len(sys.argv) < 2:
         sys.exit('ERROR Missing Arguments. Usage: %s <number to generate>' % sys.argv[0], )
     elif not (sys.argv[1].isnumeric()):
         sys.exit('Please enter a positive integer. Usage: %s <number to generate>' % sys.argv[0], )
     else:
+        print(traceback.print_exc())
         sys.exit('Unknown Error with input parameter (%s)', sys.argv[1])
-
+        
 # Set output text file name, then open and write file
 filename = 'fixmsg.txt'
 f = open(filename, 'w')
