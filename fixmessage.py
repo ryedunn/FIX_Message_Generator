@@ -20,6 +20,7 @@ import random
 from time import strftime
 import datetime
 
+# Repetitive funcion to grab a random between to integers
 def FIXValues(start, finish):
     x = str(random.randint(start, finish))
     return x
@@ -72,6 +73,6 @@ for item in range(nummsg):
 # output message to file
     f.write(msg + '\n')
 
-# close and save output file after the loop
+# Housekeeping
 f.close()
 
